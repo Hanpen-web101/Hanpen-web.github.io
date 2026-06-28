@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta> charset="UTF-8">
+  <meta> charset="UTF-8"></meta>
   <title>Test Page</title>
 
 
@@ -9,14 +9,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<input type="text" id="searchBox" placeholder="検索...">
-<button onclick="search()">検索</button>
-
 <p Id="result"></p>
   
 <body>
   <h1>こんにちは！</h1>
-  <p>これは練習ページです</1>
+  <p>これは練習ページです</p>
+    
+<input type="text" id="searchBox" placeholder="検索...">
+<button onclick="search()">検索</button>
+
+<p Id="result"></p>
+  <script>
+    function search() {
+      let keyword = document.getElementById("searchBox").balue;
+      let content = document.body.innerText;
+
+      if (content.includes(keyword)){
+        document.getElementById("result").innerText = "見つかりました！";
+      } else {
+        document.getElementById("result").innerText = "見つかりませんでした";
+      }
+    }
+  </script>
+          
+    
 </body>
 </html>
 
